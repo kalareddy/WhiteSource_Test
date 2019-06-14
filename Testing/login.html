@@ -1,0 +1,46 @@
+<ht>
+
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <p class="header">Hello this is my first Application</p>
+        <p class="header">Registration Form</p>
+        <div class="container">
+
+            <label class="statictext"><b>FirstName</b></label>
+            <input class="textfield" type="text" placeholder="Enter FirstName" name="firstname">
+            <br>
+            <label class="statictext"><b>LastName</b></label>
+            <input class="textfield" type="text" placeholder="Enter LastName" name="lastname">
+            <br>
+            <label class="statictext"><b>EmailID</b></label>
+            <input class="textfield" type="text" placeholder="Enter EmailID" name="emailid">
+            <br>
+            <label class="statictext"><b>PhoneNumber</b></label>
+            <input class="textfield" type="text" placeholder="Enter Phonenumber" name="phonenumber" onkeypress="isInputNumber(event)">
+            <br>
+            <label class="statictext"><b>Password</b></label>
+            <input class="textfield" type="password" placeholder="Enter Password" name="password">
+            <br>
+            <label class="statictext"><b>Re-EnterPassword</b></label>
+            <input class="textfield" type="password" placeholder="Re-Enter Password" name="password">
+            <br>
+            <div class="buttons">
+                <button type="button" class="cancelbtn"> Register</button>
+                <button type="button" class="cancelbtn">Cancel</button>
+            </div>
+        </div>
+
+        <script>
+            function isInputNumber(event){
+                var ch = String.fromCharCode(event.which);
+                if(!(/[0-9]/.test(ch))){
+                    event.preventDefault()
+                }
+            }
+        </script>
+    </body>
+
+</html>
